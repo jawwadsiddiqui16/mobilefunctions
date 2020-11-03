@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: 0px;
+        }
+        #box1
+        {
+            background-image: url(images/seapics.jpg);
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-size: cover;
+            
+        }
+        #main
+        {
+
+            background-color: skyblue;
+        }
+        #main td:hover
+        {
+            background-color: pink;
+        }
+        tbody
+        {
+            text-align: center;
+
+        }
+        table thead tr td
+        {
+           text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+    <table border="3px solid black;">
+        <thead>
+        <tr id="main">
+            <td>name</td>
+            <td>storage</td>
+            <td>model</td>
+            <td>price</td>
+            <td>color</td>
+            <td>wranty</td>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+    </tbody>
+
+    </table>
+
+    </div>
+
+    <script>
+      var mobile =[
+          {name:"oppo ", storage:"32gb", model:"a83", price:20000, color:"silver", wranty:"1year"},
+          {name:"oppo ", storage:"32gb", model:"a71", price:22000, color:"black", wranty:"1year"},
+          {name:"oppo ", storage:"16gb", model:"a51", price:25000, color:"white", wranty:"1year"},
+          {name:"oppo ", storage:"64gb", model:"f5", price:30000, color:"grey", wranty:"1year"},
+          {name:"oppo ", storage:"64gb", model:"f9", price:40000, color:"blue", wranty:"1year"},
+          {name:"qmobile ", storage:"8gb", model:"e4", price:3500, color:"black", wranty:"life time"},
+          {name:"nokia  ", storage:"2gb", model:1280, price:2000, color:"white", wranty:"1year"},
+          {name:"iphone ", storage:"32gb", model:5, price:16000, color:"silver", wranty:"1year"},
+          {name:"iphone ", storage:"128gb", model:11, price:220000, color:"silver", wranty:"1year"},
+          {name:"samsung ", storage:"64gb", model:"s9", price:18000, color:"white", wranty:"1year"},
+      ]
+      var row=document.querySelector('tbody');
+      for(i=0;i<mobile.length; i++)
+      {
+          row.innerHTML +="<td>" + mobile[i].name +"</td>"
+                         +"<td>" + mobile[i].storage +"</td>"
+                         +"<td>" + mobile[i].model +"</td>" 
+                         + "<td>" + mobile[i].price + "</td>"
+                         + "<td>" + mobile[i].color + "</td>"
+                         + "<td>" + mobile[i].wranty + "</td>";
+      }
+    </script>
+</body>
+</html>
